@@ -2,9 +2,15 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="PensiuneaMea.ListPage"
+             xmlns:local="clr-namespace:PensiuneaMea"
              Title="ListPage">
+    
     <StackLayout Margin="20">
-        <Editor Placeholder="Introdu descrierea pachetului de sejur" Text="{Binding Description}" HeightRequest="100" />
+        <Editor Placeholder="Introdu descrierea pachetului de sejur" Text="{Binding Description}" HeightRequest="100" >
+            <Editor.Behaviors>
+                <local:ValidationBehaviour />
+            </Editor.Behaviors>
+        </Editor>
         <Grid>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition Width="*" />
@@ -13,5 +19,15 @@
             <Button Text="Salveaza" Clicked="OnSaveButtonClicked" />
             <Button Grid.Column="1" Text="Sterge" Clicked="OnDeleteButtonClicked"/>
         </Grid>
+        <ListView x:Name="listView" Margin="20">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <TextCell Detail="{Binding Description}" />
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+                
+        <Button Text="Adauga urmatoarea caracteristica" MaximumWidthRequest="300" Clicked="OnChooseButtonClicked"/>
+        
     </StackLayout>
 </ContentPage>
