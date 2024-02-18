@@ -1,0 +1,42 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PensiuneaMea.MainPage">
+
+    <ScrollView>
+        <VerticalStackLayout
+            Padding="30,0"
+            Spacing="25">
+            <Image
+                Source="logo_nou.png"
+                HeightRequest="185"
+                Aspect="AspectFit"
+                SemanticProperties.Description="dot net bot in a race car number eight" />
+
+            <Label Style="{StaticResource Headline}"
+       SemanticProperties.HeadingLevel="Level1">
+                <Label.FormattedText>
+                    <FormattedString>
+                        <Span Text="Bine ați venit la " />
+                        <Span Text="Pensiunea Valea Morii" FontAttributes="Italic" />
+                    </FormattedString>
+                </Label.FormattedText>
+            </Label>
+
+            <Label
+    Text="Cea mai frumoasă pensiune din România"
+    Style="{StaticResource SubHeadline}"
+    SemanticProperties.HeadingLevel="Level6"
+    SemanticProperties.Description="Welcome to .NET Multi-platform App UI"
+    FontSize="16" />
+
+            <Button
+                x:Name="CounterBtn"
+                Text="Click me" 
+                SemanticProperties.Hint="Counts the number of times you click"
+                Clicked="OnCounterClicked"
+                HorizontalOptions="Fill" />
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>

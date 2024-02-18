@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PensiuneaMea.AboutPage"
+             Title="About">
+    <VerticalStackLayout Spacing="10" Margin="10">
+        <HorizontalStackLayout Spacing="10">
+            <Image Source="telefon.png" SemanticProperties.Description="Alegerea Sejurului Dumneavoastra" HeightRequest="64" />
+            <Label FontSize="22" FontAttributes="Bold" Text="My Shopping Lists" VerticalOptions="End" />
+        </HorizontalStackLayout>
+        <Label Text="Aceasta aplicatie usureaza modalitate de informare si alegere a sejurului dorit in cadrul pensiunii Valea Morii" />
+    </VerticalStackLayout>
+</ContentPage>

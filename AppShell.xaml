@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<Shell
+    x:Class="PensiuneaMea.AppShell"
+    xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:local="clr-namespace:PensiuneaMea"
+    Shell.FlyoutBehavior="Disabled"
+    Title="PensiuneaMea">
+
+    <TabBar>
+        <ShellContent Title="Acasa" ContentTemplate="{DataTemplate local:MainPage}" />
+        <ShellContent Title="Descopera Valea Morii" ContentTemplate="{DataTemplate local:DescoperaValeaMoriiPage}" />
+        <ShellContent Title="Pachete de sejur" ContentTemplate="{DataTemplate local:ListEntryPage}" />
+        <ShellContent Title="About" ContentTemplate="{DataTemplate local:AboutPage}" />
+    </TabBar>
+</Shell>

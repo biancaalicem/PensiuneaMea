@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="PensiuneaMea.DescoperaValeaMoriiPage"
+             Title="Descopera Valea Morii">
+
+    <ScrollView>
+        <StackLayout Padding="20" Spacing="20">
+           
+            <Label Text="Povestea noastră începe în anul 2010, când am simțit chemarea adâncă a naturii și dorința de a evada din agitația orașului. Gabriela și Andrei, un cuplu pasionat de călătorii și frumusețea simplă a vieții rurale, au decis să pună bazele unei afaceri care să împletească pasiunea lor cu visul de a oferi o experiență autentică în mijlocul naturii. Astfel, într-o zi de primăvară, au descoperit Valea Morii, un colț de rai ascuns în inima munților.
+
+Cu gândul la o nouă începută și cu inima plină de speranță, au achiziționat un teren în vale și au început să construiască &quot;Pensiunea Valea Morii&quot;. În fiecare pas, au fost ghidați de principiul respectului pentru mediul înconjurător și de dorința de a oferi o experiență autentică oaspeților lor.
+
+Anii care au urmat au fost marcați de muncă asiduă și de transformarea visului lor în realitate." />
+
+            
+            <Image Source="poza_1.jpg" />
+                <Label Text="Iar deoarece aici toti suntem o mare familie, ..." />
+                <Image Source="poza_2.jfif" />
+ 
+            <Label Text="Împreună cu o echipă de mesteri iscusiți, au construit pensiunea din materiale naturale, precum lemnul și piatra, în armonie cu peisajul din jur. Fiecare detaliu a fost gândit cu atenție, de la designul camerelor până la amenajarea grădinii și a spațiilor comune.
+Astăzi, &quot;Pensiunea Valea Morii&quot; este un refugiu de poveste pentru cei care doresc să se deconecteze de la agitația cotidiană și să se bucure de liniștea și frumusețea naturii. Cu camere decorate cu gust, bucate tradiționale și activități în aer liber, pensiunea este locul perfect pentru a crea amintiri de neuitat alături de familie și prieteni.
+
+Familia Popescu, alături de întreaga lor echipă, continuă să aducă în fiecare zi magia și farmecul Valei Morii în viața oaspeților lor, oferindu-le o experiență autentică și memorabilă în mijlocul naturii." />
+            <Image Source="poza_3.jpg" />
+
+        </StackLayout>
+    </ScrollView>
+
+</ContentPage>
