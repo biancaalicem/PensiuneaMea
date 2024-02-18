@@ -18,4 +18,8 @@ public partial class ListEntryPage : ContentPage
     {
         if (e.SelectedItem != null) { await Navigation.PushAsync(new ListPage { BindingContext = e.SelectedItem as PachetSejur }); }
     }
+    public void UpdateCaracteristiciPachet(List<CaracteristiciPachet> caracteristiciPachetList)
+    {
+        listView.ItemsSource = caracteristiciPachetList;
+    }
 }

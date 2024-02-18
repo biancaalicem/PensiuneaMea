@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using SQLite;
 using System.Threading.Tasks;
+using System.ComponentModel.DataAnnotations.Schema;
 
 namespace PensiuneaMea.Models
 {
@@ -14,5 +15,7 @@ namespace PensiuneaMea.Models
         [MaxLength(250), Unique]
         public string Description { get; set; }
         public DateTime Date { get; set; }
+        [ForeignKey(nameof(AlegerePachet))]
+        public int AlegerePachetID { get; set; }
     }
 }

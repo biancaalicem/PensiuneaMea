@@ -17,7 +17,23 @@ namespace PensiuneaMea.Data
             _database.CreateTableAsync<PachetSejur>().Wait();
             _database.CreateTableAsync<CaracteristiciPachet>().Wait();
             _database.CreateTableAsync<ListCaracteristiciPachet>().Wait();
+            _database.CreateTableAsync<AlegerePachet>().Wait();
 
+        }
+        public Task<List<AlegerePachet>> GetAlegerePacheteAsync()
+        {
+            return _database.Table<AlegerePachet>().ToListAsync();
+        }
+        public Task<int> SaveAlegerePachetAsync(AlegerePachet alegerePachet)
+        {
+            if(alegerePachet.ID != 0)
+            {
+                return _database.UpdateAsync(alegerePachet);
+            }
+            else
+            {
+                return _database.InsertAsync(alegerePachet);
+            }
         }
         public Task<int> SaveCaracteristiciPachetAsync(CaracteristiciPachet caracteristiciPachet)
         {

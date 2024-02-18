@@ -5,22 +5,27 @@ namespace PensiuneaMea;
 public partial class CaracteristiciPachetPage : ContentPage
 {
     PachetSejur sl;
-	public CaracteristiciPachetPage(PachetSejur slist)
-	{
-		InitializeComponent();
-        sl = slist;
-	}
-    async void OnSaveButtonClicked(object sender, EventArgs e) 
+    public CaracteristiciPachetPage(PachetSejur slist)
     {
-        var caracteristiciPachet = (CaracteristiciPachet)BindingContext; 
+        InitializeComponent();
+        sl = slist;
+    }
+    async void OnSaveButtonClicked(object sender, EventArgs e)
+    {
+        var caracteristiciPachet = (CaracteristiciPachet)BindingContext;
         await App.Database.SaveCaracteristiciPachetAsync(caracteristiciPachet);
         listView.ItemsSource = await App.Database.GetCaracteristiciPacheteAsync();
     }
-    async void OnDeleteButtonClicked(object sender, EventArgs e) 
-    { 
-        var caracteristiciPachet= (CaracteristiciPachet)BindingContext; 
-        await App.Database.DeleteCaracteristiciPachetAsync(caracteristiciPachet);
-        listView.ItemsSource = await App.Database.GetCaracteristiciPacheteAsync(); }
+    async void OnDeleteButtonClicked(object sender, EventArgs e)
+    {
+        if (listView.SelectedItem != null)
+        {
+            CaracteristiciPachet caracteristiciPachet = listView.SelectedItem as CaracteristiciPachet;
+            await App.Database.DeleteCaracteristiciPachetAsync(caracteristiciPachet);
+            listView.ItemsSource = await App.Database.GetCaracteristiciPacheteAsync();
+
+        }
+    }
     async void OnAddButtonClicked(object sender, EventArgs e)
     {
         CaracteristiciPachet p;
@@ -43,3 +48,4 @@ public partial class CaracteristiciPachetPage : ContentPage
         listView.ItemsSource = await App.Database.GetCaracteristiciPacheteAsync();
     }
 }
+

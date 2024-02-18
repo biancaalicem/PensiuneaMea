@@ -11,6 +11,7 @@
         <ShellContent Title="Acasa" ContentTemplate="{DataTemplate local:MainPage}" />
         <ShellContent Title="Descopera Valea Morii" ContentTemplate="{DataTemplate local:DescoperaValeaMoriiPage}" />
         <ShellContent Title="Pachete de sejur" ContentTemplate="{DataTemplate local:ListEntryPage}" />
+        <ShellContent Title="Pachete de ales" ContentTemplate="{DataTemplate local:AlegerePachetEntryPage}" />
         <ShellContent Title="About" ContentTemplate="{DataTemplate local:AboutPage}" />
     </TabBar>
 </Shell>

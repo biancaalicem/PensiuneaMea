@@ -9,6 +9,7 @@
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="Auto" />
+                    <RowDefinition Height="*" />
                     <RowDefinition Height="Auto" />
                     <RowDefinition Height="Auto" />
                 </Grid.RowDefinitions>
@@ -16,16 +17,16 @@
                     <ColumnDefinition Width="*" />
                     <ColumnDefinition Width="*" />
                 </Grid.ColumnDefinitions>
-                <Button Text="Salveaza Caracteristica" MaximumWidthRequest="200" Clicked="OnSaveButtonClicked" />
-                <Button Grid.Column="1" Text="Sterge Caracteristica" MaximumWidthRequest="200" Clicked="OnDeleteButtonClicked"/>
-                <ListView Grid.Row="1" Grid.Column="0" x:Name="listView" Margin="20" IsRefreshing="True" >
+                <Button Text="Salveaza Caracteristica" MaximumWidthRequest="200" Clicked="OnSaveButtonClicked"  />
+                <ListView Grid.Row="1" Grid.Column="0" x:Name="listView" Margin="20" IsRefreshing="True" VerticalOptions="CenterAndExpand" >
                     <ListView.ItemTemplate>
                         <DataTemplate>
                             <TextCell Text="{Binding Description}" />
                         </DataTemplate>
                     </ListView.ItemTemplate>
                 </ListView>
-                <Button Grid.Row="2" Grid.Column="0" Text="Adauga la Pachet Sejur" MaximumWidthRequest="200" Clicked="OnAddButtonClicked" />
+                <Button Grid.Row="2" Grid.Column="1" Text="Sterge Caracteristica" MaximumWidthRequest="200" Clicked="OnDeleteButtonClicked"/>
+                <Button Grid.Row="2" Grid.Column="0" Text="Adauga la Pachet Sejur" MaximumWidthRequest="200" Clicked="OnAddButtonClicked" HorizontalOptions="Center"/>
             </Grid>
         </StackLayout>
     </ContentPage.Content>
